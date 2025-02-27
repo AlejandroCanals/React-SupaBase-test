@@ -5,7 +5,7 @@ import { supabase } from '../../config/supabaseClient'; // Asegúrate de que la 
 export default function HomeScreen() {
   useEffect(() => {
     async function testConnection() {
-      const { data, error } = await supabase.from('usuarios').select('*').limit(1);
+      const { data, error } = await supabase.from('users').select('*');
       if (error) {
         console.error('Error conectando a Supabase:', error);
       } else {
